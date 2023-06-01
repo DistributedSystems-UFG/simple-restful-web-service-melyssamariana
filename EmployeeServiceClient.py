@@ -29,8 +29,8 @@ def averageSalaryAll():
 def serviceTester():
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
     #print('Average salary of all employees: ' + str(averageSalaryAll()))
-    #print('Employee with ID 101 exists: ' + str(checkID(101)))
-    #print('Employee with ID 999 exists: ' + str(checkID(999)))
+    print('Employee with ID 101 exists: ' + str(checkID(101)))
+    print('Employee with ID 999 exists: ' + str(checkID(999)))
     print('Updating salary of employee with ID 101 to 100000')
     updateSalary(101, 100000)
 '''
