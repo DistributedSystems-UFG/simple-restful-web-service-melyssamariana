@@ -3,11 +3,10 @@
 Simple RESTful Web Service used to illustrate the concept (based on the example by S. Subramanian on DZone.com).
 Starter code for the assignment described below.
 
-What you have to do on this assignment:
+# Functionalities 
 
-After experimenting with this Web service (as described in the lab), extend the service (and its API) to:
-
-a) store and update the salary of the employee;
+a) for update the salary of the employee:
+    updateSalary(id,new_salary), when the id is the employee id.
 
 b) check for errors, such as when trying to update information for a employee that does not exist;
 
