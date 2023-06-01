@@ -15,6 +15,8 @@ def checkID(id):
     response = requests.get(api_url)
     print("TESTE")
     print(response.json())
+    print(response)
+    print(response['emp'])
     if response.json() == "{'emp': []}":
         return False
     else:
