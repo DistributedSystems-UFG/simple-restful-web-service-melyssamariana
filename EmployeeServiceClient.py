@@ -5,7 +5,7 @@ import const
 def updateSalary(id,new_salary):
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
     api_url = api_base_url + '/' + str(id)
-    update = {"salary":new_salary}
+    update = {'salary':new_salary}
     response = requests.put(api_url, json=update)
     print (response.json())
 
@@ -28,9 +28,9 @@ def averageSalaryAll():
 
 def serviceTester():
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
-    print('Average salary of all employees: ' + str(averageSalaryAll()))
-    print('Employee with ID 101 exists: ' + str(checkID(101)))
-    print('Employee with ID 999 exists: ' + str(checkID(999)))
+    #print('Average salary of all employees: ' + str(averageSalaryAll()))
+    #print('Employee with ID 101 exists: ' + str(checkID(101)))
+    #print('Employee with ID 999 exists: ' + str(checkID(999)))
     print('Updating salary of employee with ID 101 to 100000')
     updateSalary(101, 100000)
 '''
