@@ -9,18 +9,6 @@ def updateSalary(id,new_salary):
     response = requests.put(api_url, json=update)
     print (response.json())
 
-def checkID(id):
-    api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
-    api_url = api_base_url + '/' + str(id)
-    response = requests.get(api_url)
-    print("TESTE")
-    print(response.json())
-    print(response.json().get('emp'))
-    if response.json().get('emp') == []:
-        return False
-    else:
-        return True
-
 def averageSalaryAll():
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
     response = requests.get(api_base_url)
