@@ -13,6 +13,8 @@ def checkID(id):
     api_base_url = 'http://' + const.IP_ADD + ':' + str(const.PORT) + '/empdb/employee'
     api_url = api_base_url + '/' + str(id)
     response = requests.get(api_url)
+    print("TESTE")
+    print(response.json())
     if response.json() == []:
         return False
     else:
