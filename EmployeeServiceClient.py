@@ -16,7 +16,6 @@ def checkID(id):
     print("TESTE")
     print(response.json())
     print(response)
-    print(response['emp'])
     if response.json() == "{'emp': []}":
         return False
     else:
