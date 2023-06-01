@@ -14,12 +14,12 @@ empDB=[
  {
  'id':'101',
  'name':'Saravanan S',
- 'title':'Technical Leader'
+ 'title':'Technical Leader',
  },
  {
  'id':'201',
  'name':'Rajkumar P',
- 'title':'Sr Software Engineer'
+ 'title':'Sr Software Engineer',
  }
  ]
 
@@ -44,6 +44,9 @@ def updateEmp(empId):
 
         if 'title' in request.json:
             em[0]['title'] = request.json['title']
+        
+        if 'salary' in request.json:
+            em[0]['salary'] = request.json['salary']
 
     return jsonify(em)
 
@@ -54,10 +57,12 @@ def createEmp():
     dat = {
     'id':request.json['id'],
     'name':request.json['name'],
-    'title':request.json['title']
+    'title':request.json['title'],
+    'salary':request.json['salary']
     }
     empDB.append(dat)
     return jsonify(dat)
+
 
 @app.route('/empdb/employee/<empId>',methods=['DELETE'])
 def deleteEmp(empId):
